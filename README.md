@@ -13,7 +13,7 @@ https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitalt
 # メタ情報の確認
 pdal info --metadata 09LC2867.las
 
-# パイプラインでlasのマージ
+# パイプラインでlasをマージ
 pdal pipeline merge-pipeline.json
 
 # 座標参照系の付与
