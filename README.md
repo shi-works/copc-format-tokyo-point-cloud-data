@@ -10,43 +10,35 @@ https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitalt
 
 ```
 # OSGeo4W Shellを起動
-# パイプラインを用いてテキストからLASへの変換
-pdal pipeline pipeline_txt2las.json
+# メタ情報の確認
+pdal info --metadata 09LC2867.las
 
-# メタデータの確認
-pdal info --metadata 06QC511_org.las
+# パイプラインでlasのマージ
+pdal pipeline merge-pipeline.json
 
 # 座標参照系の付与
-pdal translate -i 06QC511_org.las -o 06QC511_org_translated.las --writers.las.a_srs="EPSG:6674"
+pdal translate -i hachioji-station-org.las -o hachioji-station-translated.las --writers.las.a_srs="EPSG:6677"
 
-# メタデータの確認
-pdal info --metadata 06QC511_org_translated.las
+# メタ情報の確認
+pdal info --metadata hachioji-station-translated.las
 
 # COPCへの変換
-pdal translate -i 06QC511_org_translated.las -o 06QC511_org_translated.copc.laz --writers.copc.forward=all
+pdal translate -i hachioji-station-translated.las -o hachioji-station-translated.copc.laz --writers.copc.forward=all
 ```
-pipeline_txt2las.json
+merge-pipeline.json
 ```json
 {
-  "pipeline":[
+  "pipeline": [
     {
-      "type":"readers.text",
-      "filename":"06QC511_org.txt",
-      "separator":",",
-      "header":"ID,X,Y,Z,B",
-      "spatialreference":"EPSG:6674"
+      "type": "readers.las",
+      "filename": "las/*.las"
     },
     {
-      "type":"filters.reprojection",
-      "out_srs":"EPSG:6674"
-    },
-    {
-      "type":"writers.las",
-      "filename":"06QC511_org.las"
+      "type": "writers.las",
+      "filename": "hachioji-station.las"
     }
   ]
 }
-
 ```
 ## COPC ViewerでCOPCの表示
 - https://viewer.copc.io
@@ -54,4 +46,4 @@ pipeline_txt2las.json
 https://viewer.copc.io/?copc=https://www.example.com/xxx.copc.laz
 
 ## Data Source
-https://wakayamaken.geocloud.jp/mp/22
+https://catalog.data.metro.tokyo.lg.jp/dataset/t000029d0000000020
