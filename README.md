@@ -2,8 +2,12 @@
 
 ## Public Website
 - Ctrlを押しながらドラッグで回転できる  
-- 色はデフォルトでElevationになっているのでパネルからRGBに変更すると実際の色で表示できる  
+- 色はデフォルトでElevationになっているのでパネルからRGBに変更すると実際の色で表示できる
+### 八王子駅周辺
 https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitaltwin/hachioji-station-translated.copc.laz
+
+### 青ヶ島（DEM）
+https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitaltwin/aogashima-dem-translated.copc.laz
 
 ## COPC（Cloud Optimized Point Cloud）の生成方法
 - [pdal 2.5.2](https://pdal.io/en/latest/)
