@@ -9,7 +9,7 @@ https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitalt
 ### 青ヶ島（DEM）
 https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitaltwin/aogashima-dem-translated.copc.laz
 
-### 青ヶ島（DEM）
+### 高幡不動尊山古墳（DEM）
 https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitaltwin/takahata-fudoson-tumulus-dem-translated.copc.laz
 
 ## COPC（Cloud Optimized Point Cloud）の生成方法
