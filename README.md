@@ -12,6 +12,9 @@ https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitalt
 ### 高幡不動尊山古墳（DEM）
 https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitaltwin/takahata-fudoson-tumulus-dem-translated.copc.laz
 
+### 小河内ダム（おごうちだむ）
+https://viewer.copc.io/?copc=https://xs489works.xsrv.jp/copc-data/tokyo-digitaltwin/ogochi-dam-translated.copc.laz
+
 ## COPC（Cloud Optimized Point Cloud）の生成方法
 - [pdal 2.5.2](https://pdal.io/en/latest/)
 
